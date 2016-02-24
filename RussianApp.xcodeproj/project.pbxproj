@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27FA787D1C7D9C85002FEC0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA787C1C7D9C85002FEC0B /* main.m */; };
+		27FA78801C7D9C85002FEC0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA787F1C7D9C85002FEC0B /* AppDelegate.m */; };
+		27FA78831C7D9C85002FEC0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78821C7D9C85002FEC0B /* ViewController.m */; };
+		27FA78861C7D9C85002FEC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FA78841C7D9C85002FEC0B /* Main.storyboard */; };
+		27FA78881C7D9C85002FEC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FA78871C7D9C85002FEC0B /* Assets.xcassets */; };
+		27FA788B1C7D9C85002FEC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FA78891C7D9C85002FEC0B /* LaunchScreen.storyboard */; };
+		27FA78961C7D9C85002FEC0B /* RussianAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78951C7D9C85002FEC0B /* RussianAppTests.m */; };
+		27FA78A11C7D9C85002FEC0B /* RussianAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78A01C7D9C85002FEC0B /* RussianAppUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27FA78921C7D9C85002FEC0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FA78701C7D9C84002FEC0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FA78771C7D9C84002FEC0B;
+			remoteInfo = RussianApp;
+		};
+		27FA789D1C7D9C85002FEC0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FA78701C7D9C84002FEC0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FA78771C7D9C84002FEC0B;
+			remoteInfo = RussianApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27FA78781C7D9C85002FEC0B /* RussianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FA787C1C7D9C85002FEC0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27FA787E1C7D9C85002FEC0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27FA787F1C7D9C85002FEC0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27FA78811C7D9C85002FEC0B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		27FA78821C7D9C85002FEC0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27FA78851C7D9C85002FEC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27FA78871C7D9C85002FEC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27FA788A1C7D9C85002FEC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27FA788C1C7D9C85002FEC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FA78911C7D9C85002FEC0B /* RussianAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RussianAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FA78951C7D9C85002FEC0B /* RussianAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RussianAppTests.m; sourceTree = "<group>"; };
+		27FA78971C7D9C85002FEC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FA789C1C7D9C85002FEC0B /* RussianAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RussianAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FA78A01C7D9C85002FEC0B /* RussianAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RussianAppUITests.m; sourceTree = "<group>"; };
+		27FA78A21C7D9C85002FEC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27FA78751C7D9C84002FEC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FA788E1C7D9C85002FEC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FA78991C7D9C85002FEC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27FA786F1C7D9C84002FEC0B = {
+			isa = PBXGroup;
+			children = (
+				27FA787A1C7D9C85002FEC0B /* RussianApp */,
+				27FA78941C7D9C85002FEC0B /* RussianAppTests */,
+				27FA789F1C7D9C85002FEC0B /* RussianAppUITests */,
+				27FA78791C7D9C85002FEC0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27FA78791C7D9C85002FEC0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27FA78781C7D9C85002FEC0B /* RussianApp.app */,
+				27FA78911C7D9C85002FEC0B /* RussianAppTests.xctest */,
+				27FA789C1C7D9C85002FEC0B /* RussianAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27FA787A1C7D9C85002FEC0B /* RussianApp */ = {
+			isa = PBXGroup;
+			children = (
+				27FA787E1C7D9C85002FEC0B /* AppDelegate.h */,
+				27FA787F1C7D9C85002FEC0B /* AppDelegate.m */,
+				27FA78811C7D9C85002FEC0B /* ViewController.h */,
+				27FA78821C7D9C85002FEC0B /* ViewController.m */,
+				27FA78841C7D9C85002FEC0B /* Main.storyboard */,
+				27FA78871C7D9C85002FEC0B /* Assets.xcassets */,
+				27FA78891C7D9C85002FEC0B /* LaunchScreen.storyboard */,
+				27FA788C1C7D9C85002FEC0B /* Info.plist */,
+				27FA787B1C7D9C85002FEC0B /* Supporting Files */,
+			);
+			path = RussianApp;
+			sourceTree = "<group>";
+		};
+		27FA787B1C7D9C85002FEC0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27FA787C1C7D9C85002FEC0B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27FA78941C7D9C85002FEC0B /* RussianAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				27FA78951C7D9C85002FEC0B /* RussianAppTests.m */,
+				27FA78971C7D9C85002FEC0B /* Info.plist */,
+			);
+			path = RussianAppTests;
+			sourceTree = "<group>";
+		};
+		27FA789F1C7D9C85002FEC0B /* RussianAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27FA78A01C7D9C85002FEC0B /* RussianAppUITests.m */,
+				27FA78A21C7D9C85002FEC0B /* Info.plist */,
+			);
+			path = RussianAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27FA78771C7D9C84002FEC0B /* RussianApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FA78A51C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianApp" */;
+			buildPhases = (
+				27FA78741C7D9C84002FEC0B /* Sources */,
+				27FA78751C7D9C84002FEC0B /* Frameworks */,
+				27FA78761C7D9C84002FEC0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RussianApp;
+			productName = RussianApp;
+			productReference = 27FA78781C7D9C85002FEC0B /* RussianApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27FA78901C7D9C85002FEC0B /* RussianAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FA78A81C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppTests" */;
+			buildPhases = (
+				27FA788D1C7D9C85002FEC0B /* Sources */,
+				27FA788E1C7D9C85002FEC0B /* Frameworks */,
+				27FA788F1C7D9C85002FEC0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27FA78931C7D9C85002FEC0B /* PBXTargetDependency */,
+			);
+			name = RussianAppTests;
+			productName = RussianAppTests;
+			productReference = 27FA78911C7D9C85002FEC0B /* RussianAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27FA789B1C7D9C85002FEC0B /* RussianAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FA78AB1C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppUITests" */;
+			buildPhases = (
+				27FA78981C7D9C85002FEC0B /* Sources */,
+				27FA78991C7D9C85002FEC0B /* Frameworks */,
+				27FA789A1C7D9C85002FEC0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27FA789E1C7D9C85002FEC0B /* PBXTargetDependency */,
+			);
+			name = RussianAppUITests;
+			productName = RussianAppUITests;
+			productReference = 27FA789C1C7D9C85002FEC0B /* RussianAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27FA78701C7D9C84002FEC0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kyle Griffith";
+				TargetAttributes = {
+					27FA78771C7D9C84002FEC0B = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					27FA78901C7D9C85002FEC0B = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 27FA78771C7D9C84002FEC0B;
+					};
+					27FA789B1C7D9C85002FEC0B = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 27FA78771C7D9C84002FEC0B;
+					};
+				};
+			};
+			buildConfigurationList = 27FA78731C7D9C84002FEC0B /* Build configuration list for PBXProject "RussianApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27FA786F1C7D9C84002FEC0B;
+			productRefGroup = 27FA78791C7D9C85002FEC0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27FA78771C7D9C84002FEC0B /* RussianApp */,
+				27FA78901C7D9C85002FEC0B /* RussianAppTests */,
+				27FA789B1C7D9C85002FEC0B /* RussianAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27FA78761C7D9C84002FEC0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FA788B1C7D9C85002FEC0B /* LaunchScreen.storyboard in Resources */,
+				27FA78881C7D9C85002FEC0B /* Assets.xcassets in Resources */,
+				27FA78861C7D9C85002FEC0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FA788F1C7D9C85002FEC0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FA789A1C7D9C85002FEC0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27FA78741C7D9C84002FEC0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FA78831C7D9C85002FEC0B /* ViewController.m in Sources */,
+				27FA78801C7D9C85002FEC0B /* AppDelegate.m in Sources */,
+				27FA787D1C7D9C85002FEC0B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FA788D1C7D9C85002FEC0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FA78961C7D9C85002FEC0B /* RussianAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FA78981C7D9C85002FEC0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FA78A11C7D9C85002FEC0B /* RussianAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27FA78931C7D9C85002FEC0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FA78771C7D9C84002FEC0B /* RussianApp */;
+			targetProxy = 27FA78921C7D9C85002FEC0B /* PBXContainerItemProxy */;
+		};
+		27FA789E1C7D9C85002FEC0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FA78771C7D9C84002FEC0B /* RussianApp */;
+			targetProxy = 27FA789D1C7D9C85002FEC0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27FA78841C7D9C85002FEC0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FA78851C7D9C85002FEC0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27FA78891C7D9C85002FEC0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FA788A1C7D9C85002FEC0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27FA78A31C7D9C85002FEC0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		27FA78A41C7D9C85002FEC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27FA78A61C7D9C85002FEC0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RussianApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27FA78A71C7D9C85002FEC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RussianApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		27FA78A91C7D9C85002FEC0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RussianAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RussianApp.app/RussianApp";
+			};
+			name = Debug;
+		};
+		27FA78AA1C7D9C85002FEC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RussianAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RussianApp.app/RussianApp";
+			};
+			name = Release;
+		};
+		27FA78AC1C7D9C85002FEC0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RussianAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RussianApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		27FA78AD1C7D9C85002FEC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RussianAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RussianApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27FA78731C7D9C84002FEC0B /* Build configuration list for PBXProject "RussianApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FA78A31C7D9C85002FEC0B /* Debug */,
+				27FA78A41C7D9C85002FEC0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27FA78A51C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FA78A61C7D9C85002FEC0B /* Debug */,
+				27FA78A71C7D9C85002FEC0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27FA78A81C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FA78A91C7D9C85002FEC0B /* Debug */,
+				27FA78AA1C7D9C85002FEC0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27FA78AB1C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FA78AC1C7D9C85002FEC0B /* Debug */,
+				27FA78AD1C7D9C85002FEC0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27FA78701C7D9C84002FEC0B /* Project object */;
+}
