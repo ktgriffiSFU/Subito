@@ -17,10 +17,27 @@
 @synthesize name;
 @synthesize phone;
 @synthesize email;
-
+@synthesize picker;
+@synthesize whatLabel;
+NSArray *services;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    picker.hidden=YES; 
+    services = [[NSArray alloc] initWithObjects:
+                         @"Маникюр/ Педикюр", @"Домашняя уборка", @"Услуги курьера",
+                         @"Доктор на дом", @"Личный тренер",@"Мастер на все руки",@"Массаж", nil];
+    whatLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whatLabelTapped)];
+    [whatLabel addGestureRecognizer:tapGesture];
 }
+
+-(void)whatLabelTapped{
+    picker.hidden=NO;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,4 +90,31 @@
     [alert show];
     
 }
+#pragma mark -
+#pragma mark PickerView DataSource
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component
+{
+    return [services count];
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    return [services objectAtIndex:row];
+}
+#pragma mark -
+#pragma mark PickerView Delegate
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
+      inComponent:(NSInteger)component
+{
+    NSString *whatString =[services objectAtIndex:row];
+    whatLabel.text = whatString;
+}
+
 @end
