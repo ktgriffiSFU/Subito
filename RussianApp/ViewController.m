@@ -35,11 +35,6 @@ NSArray *services;
     dateLabel.userInteractionEnabled = YES;
     UITapGestureRecognizer * dateTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dateLabelTapped)];
     [dateLabel addGestureRecognizer:dateTapGesture];
-    
-    whereField.userInteractionEnabled = YES;
-    UITapGestureRecognizer * textTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textFieldTapped)];
-
-    [self.whereField addGestureRecognizer:textTapGesture];
 
     
 }
@@ -64,9 +59,7 @@ NSArray *services;
         datePicker.hidden=YES;
     }
 }
--(void)textFieldTapped{
-    NSLog(@"It Worked");
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -81,10 +74,40 @@ NSArray *services;
     NSString *nameString=name.text;
     NSString *phoneString=phone.text;
     NSString *emailString=email.text;
-    int numberLength=10;
-    //Check values
+    //Check all fields have been filled
+    if (![self CheckStringSize:whereString :0]) {
+        [self Alert:@"Indicate where you want the service"];
+        return;
+    }
+    if (![self CheckStringSize:nameString :0]) {
+        [self Alert:@"Please tell us your name"];
+        return;
+    }
+    if (![self CheckStringSize:phoneString :9]) {
+        [self Alert:@"Please enter a valid number"];
+        return;
+    }
+    if (![self CheckStringSize:emailString :3]) {
+        [self Alert:@"Please enter a valid email"];
+        return;
+    }
+    if(![emailString containsString:@"@"]) {
+        [self Alert:@"Please enter a valid email"];
+        return;
+    }
     
+    [self sendToForm];
+
+}
+-(bool)CheckStringSize : (NSString *)inputString:(int *)size{
+    if (inputString.length>size) {
+        return true;
+    }else{
+        return false;
+    }
     
+}
+-(void)sendToForm{
     
     //initialize new mutable data
     NSMutableData *data = [[NSMutableData alloc] init];
@@ -112,10 +135,9 @@ NSArray *services;
     //start the connection
     [connection start];
 }
-
-- (void) Alert: (NSString*)title :(NSString *)message {
+- (void) Alert:(NSString *)message {
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     [alert show];
     
 }
