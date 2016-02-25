@@ -19,7 +19,14 @@
 @synthesize email;
 @synthesize picker,datePicker;
 @synthesize whatLabel,dateLabel;
+
 NSArray *services;
+NSString *serviceChoice;
+NSString *dateChoice;
+NSString *whereString;
+NSString *nameString;
+NSString *phoneString;
+NSString *emailString;
 - (void)viewDidLoad {
     [super viewDidLoad];
     picker.hidden=YES;
@@ -70,24 +77,24 @@ NSArray *services;
 }
 
 - (IBAction)submitButton:(UIButton *)sender {
-    NSString *whereString = whereField.text;
-    NSString *nameString=name.text;
-    NSString *phoneString=phone.text;
-    NSString *emailString=email.text;
+    whereString = whereField.text;
+    nameString=name.text;
+    phoneString=phone.text;
+    emailString=email.text;
     //Check all fields have been filled
-    if (![self CheckStringSize:whereString :0]) {
+    if (![self CheckStringSize:whereString]) {
         [self Alert:@"Indicate where you want the service"];
         return;
     }
-    if (![self CheckStringSize:nameString :0]) {
+    if (![self CheckStringSize:nameString]) {
         [self Alert:@"Please tell us your name"];
         return;
     }
-    if (![self CheckStringSize:phoneString :9]) {
+    if (![self CheckStringSize:phoneString]) {
         [self Alert:@"Please enter a valid number"];
         return;
     }
-    if (![self CheckStringSize:emailString :3]) {
+    if (![self CheckStringSize:emailString]) {
         [self Alert:@"Please enter a valid email"];
         return;
     }
@@ -99,8 +106,8 @@ NSArray *services;
     [self sendToForm];
 
 }
--(bool)CheckStringSize : (NSString *)inputString:(int *)size{
-    if (inputString.length>size) {
+-(bool)CheckStringSize : (NSString *)inputString{
+    if (inputString.length>0) {
         return true;
     }else{
         return false;
@@ -108,12 +115,16 @@ NSArray *services;
     
 }
 -(void)sendToForm{
-    
+    whereString = whereField.text;
+    nameString=name.text;
+    phoneString=phone.text;
+    emailString=email.text;
+    dateChoice = dateLabel.text;
+    serviceChoice = whatLabel.text;
     //initialize new mutable data
     NSMutableData *data = [[NSMutableData alloc] init];
-    
     //initialize url that is going to be fetched.
-    NSURL *url = [NSURL URLWithString:@"https://docs.google.com/forms/d/1yffvViDKq7BHALtC7Om-ceFLWT5hb_cM9sBqndHG3aU/formResponse"];
+    NSURL *url = [NSURL URLWithString:@"https://docs.google.com/forms/d/1jeyxQYlgIUylhXnZZEcy6BC2dx_2AUB3qSNuCqFHUDU/formResponse"];
     
     //initialize a request from url
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[url standardizedURL]];
@@ -121,9 +132,7 @@ NSArray *services;
     //set http method
     [request setHTTPMethod:@"POST"];
     //initialize a post data
-    NSString *postData = @"entry.154268020=iOS&entry.940479455=vajhcsd&entry.247556683=BJKSVDB";
-    //set request content type we MUST set this value.
-    
+    NSString *postData = [NSString stringWithFormat:@"entry.1550955212=%@&entry.935955213=%@&entry.1547576233=%@&entry.202631922=%@&entry.1387567225=%@&entry.1031369018",serviceChoice,dateChoice,whereString,emailString,phoneString,nameString];    //set request content type we MUST set this value.
     [request setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     
     //set post data of request
@@ -131,7 +140,7 @@ NSArray *services;
     
     //initialize a connection from request
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+
     //start the connection
     [connection start];
 }
@@ -176,5 +185,21 @@ numberOfRowsInComponent:(NSInteger)component
     NSString *formatedDate = [dateFormatter stringFromDate:self.datePicker.date];
     self.dateLabel.text =formatedDate;
 }
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    responseData = [[NSMutableData alloc] init];
+    NSLog(@"Connection did recieve response");
+}
 
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [responseData appendData:data];
+    NSLog(@"Connection did recieve data");
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"RESPONSE: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"CONNECTION ERROR: %@", [error localizedDescription]);
+}
 @end
