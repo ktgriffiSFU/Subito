@@ -13,16 +13,17 @@
 @end
 
 @implementation ViewController
-@synthesize where;
+@synthesize whereField;
 @synthesize name;
 @synthesize phone;
 @synthesize email;
-@synthesize picker;
-@synthesize whatLabel;
+@synthesize picker,datePicker;
+@synthesize whatLabel,dateLabel;
 NSArray *services;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    picker.hidden=YES; 
+    picker.hidden=YES;
+    datePicker.hidden=YES;
     services = [[NSArray alloc] initWithObjects:
                          @"Маникюр/ Педикюр", @"Домашняя уборка", @"Услуги курьера",
                          @"Доктор на дом", @"Личный тренер",@"Мастер на все руки",@"Массаж", nil];
@@ -30,14 +31,42 @@ NSArray *services;
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whatLabelTapped)];
     [whatLabel addGestureRecognizer:tapGesture];
+    
+    dateLabel.userInteractionEnabled = YES;
+    UITapGestureRecognizer * dateTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dateLabelTapped)];
+    [dateLabel addGestureRecognizer:dateTapGesture];
+    
+    whereField.userInteractionEnabled = YES;
+    UITapGestureRecognizer * textTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textFieldTapped)];
+
+    [self.whereField addGestureRecognizer:textTapGesture];
+
+    
 }
 
 -(void)whatLabelTapped{
-    picker.hidden=NO;
+    if (datePicker.hidden == NO) {
+        datePicker.hidden = YES;
+    }
+    if (picker.hidden==YES) {
+        picker.hidden=NO;
+    }else{
+        picker.hidden=YES;
+    }
 }
-
-
-
+-(void)dateLabelTapped{
+    if (picker.hidden ==NO) {
+        picker.hidden =YES;
+    }
+    if (datePicker.hidden==YES) {
+        datePicker.hidden=NO;
+    }else{
+        datePicker.hidden=YES;
+    }
+}
+-(void)textFieldTapped{
+    NSLog(@"It Worked");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -48,7 +77,7 @@ NSArray *services;
 }
 
 - (IBAction)submitButton:(UIButton *)sender {
-    NSString *whereString = where.text;
+    NSString *whereString = whereField.text;
     NSString *nameString=name.text;
     NSString *phoneString=phone.text;
     NSString *emailString=email.text;
@@ -115,6 +144,15 @@ numberOfRowsInComponent:(NSInteger)component
 {
     NSString *whatString =[services objectAtIndex:row];
     whatLabel.text = whatString;
+}
+
+- (IBAction)pickerAction:(id)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"dd-MM-yyyy HH:mm"];
+
+    NSString *formatedDate = [dateFormatter stringFromDate:self.datePicker.date];
+    self.dateLabel.text =formatedDate;
 }
 
 @end

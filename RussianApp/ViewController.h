@@ -10,17 +10,18 @@
 
 @interface ViewController : UIViewController
 <UIPickerViewDelegate, UIPickerViewDataSource>
-{
-    UIPickerView       *picker;
-}
-@property (nonatomic, retain) IBOutlet UIPickerView *picker;
 
+@property (nonatomic, retain) IBOutlet UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+- (IBAction)pickerAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *whatLabel;
 
 
 //What Что needed
 //When Когда needed
-@property (weak, nonatomic) IBOutlet UITextField *where;
+@property (weak, nonatomic) IBOutlet UITextField *whereField;
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *email;
