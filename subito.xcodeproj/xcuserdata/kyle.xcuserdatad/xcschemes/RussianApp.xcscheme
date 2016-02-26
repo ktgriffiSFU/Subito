@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27FA78771C7D9C84002FEC0B"
-               BuildableName = "RussianApp.app"
-               BlueprintName = "RussianApp"
-               ReferencedContainer = "container:RussianApp.xcodeproj">
+               BuildableName = "subito.app"
+               BlueprintName = "subito"
+               ReferencedContainer = "container:subito.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27FA78901C7D9C85002FEC0B"
-               BuildableName = "RussianAppTests.xctest"
-               BlueprintName = "RussianAppTests"
-               ReferencedContainer = "container:RussianApp.xcodeproj">
+               BuildableName = "subito.xctest"
+               BlueprintName = "subitoTests"
+               ReferencedContainer = "container:subito.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27FA789B1C7D9C85002FEC0B"
-               BuildableName = "RussianAppUITests.xctest"
-               BlueprintName = "RussianAppUITests"
-               ReferencedContainer = "container:RussianApp.xcodeproj">
+               BuildableName = "subito.xctest"
+               BlueprintName = "subitoUITests"
+               ReferencedContainer = "container:subito.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27FA78771C7D9C84002FEC0B"
-            BuildableName = "RussianApp.app"
-            BlueprintName = "RussianApp"
-            ReferencedContainer = "container:RussianApp.xcodeproj">
+            BuildableName = "subito.app"
+            BlueprintName = "subito"
+            ReferencedContainer = "container:subito.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27FA78771C7D9C84002FEC0B"
-            BuildableName = "RussianApp.app"
-            BlueprintName = "RussianApp"
-            ReferencedContainer = "container:RussianApp.xcodeproj">
+            BuildableName = "subito.app"
+            BlueprintName = "subito"
+            ReferencedContainer = "container:subito.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27FA78771C7D9C84002FEC0B"
-            BuildableName = "RussianApp.app"
-            BlueprintName = "RussianApp"
-            ReferencedContainer = "container:RussianApp.xcodeproj">
+            BuildableName = "subito.app"
+            BlueprintName = "subito"
+            ReferencedContainer = "container:subito.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

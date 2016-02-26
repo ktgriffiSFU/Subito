@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27FA78781C7D9C85002FEC0B /* RussianApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RussianApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FA78781C7D9C85002FEC0B /* subito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = subito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FA787C1C7D9C85002FEC0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27FA787E1C7D9C85002FEC0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27FA787F1C7D9C85002FEC0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,10 +45,10 @@
 		27FA78871C7D9C85002FEC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27FA788A1C7D9C85002FEC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27FA788C1C7D9C85002FEC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27FA78911C7D9C85002FEC0B /* RussianAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RussianAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FA78911C7D9C85002FEC0B /* subito.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = subito.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FA78951C7D9C85002FEC0B /* RussianAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RussianAppTests.m; sourceTree = "<group>"; };
 		27FA78971C7D9C85002FEC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27FA789C1C7D9C85002FEC0B /* RussianAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RussianAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FA789C1C7D9C85002FEC0B /* subito.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = subito.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FA78A01C7D9C85002FEC0B /* RussianAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RussianAppUITests.m; sourceTree = "<group>"; };
 		27FA78A21C7D9C85002FEC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,9 +91,9 @@
 		27FA78791C7D9C85002FEC0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27FA78781C7D9C85002FEC0B /* RussianApp.app */,
-				27FA78911C7D9C85002FEC0B /* RussianAppTests.xctest */,
-				27FA789C1C7D9C85002FEC0B /* RussianAppUITests.xctest */,
+				27FA78781C7D9C85002FEC0B /* subito.app */,
+				27FA78911C7D9C85002FEC0B /* subito.xctest */,
+				27FA789C1C7D9C85002FEC0B /* subito.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27FA78771C7D9C84002FEC0B /* RussianApp */ = {
+		27FA78771C7D9C84002FEC0B /* subito */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27FA78A51C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianApp" */;
+			buildConfigurationList = 27FA78A51C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "subito" */;
 			buildPhases = (
 				27FA78741C7D9C84002FEC0B /* Sources */,
 				27FA78751C7D9C84002FEC0B /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = RussianApp;
+			name = subito;
 			productName = RussianApp;
-			productReference = 27FA78781C7D9C85002FEC0B /* RussianApp.app */;
+			productReference = 27FA78781C7D9C85002FEC0B /* subito.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27FA78901C7D9C85002FEC0B /* RussianAppTests */ = {
+		27FA78901C7D9C85002FEC0B /* subitoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27FA78A81C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppTests" */;
+			buildConfigurationList = 27FA78A81C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "subitoTests" */;
 			buildPhases = (
 				27FA788D1C7D9C85002FEC0B /* Sources */,
 				27FA788E1C7D9C85002FEC0B /* Frameworks */,
@@ -173,14 +173,14 @@
 			dependencies = (
 				27FA78931C7D9C85002FEC0B /* PBXTargetDependency */,
 			);
-			name = RussianAppTests;
+			name = subitoTests;
 			productName = RussianAppTests;
-			productReference = 27FA78911C7D9C85002FEC0B /* RussianAppTests.xctest */;
+			productReference = 27FA78911C7D9C85002FEC0B /* subito.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		27FA789B1C7D9C85002FEC0B /* RussianAppUITests */ = {
+		27FA789B1C7D9C85002FEC0B /* subitoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27FA78AB1C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppUITests" */;
+			buildConfigurationList = 27FA78AB1C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "subitoUITests" */;
 			buildPhases = (
 				27FA78981C7D9C85002FEC0B /* Sources */,
 				27FA78991C7D9C85002FEC0B /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				27FA789E1C7D9C85002FEC0B /* PBXTargetDependency */,
 			);
-			name = RussianAppUITests;
+			name = subitoUITests;
 			productName = RussianAppUITests;
-			productReference = 27FA789C1C7D9C85002FEC0B /* RussianAppUITests.xctest */;
+			productReference = 27FA789C1C7D9C85002FEC0B /* subito.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 27FA78731C7D9C84002FEC0B /* Build configuration list for PBXProject "RussianApp" */;
+			buildConfigurationList = 27FA78731C7D9C84002FEC0B /* Build configuration list for PBXProject "subito" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,9 +231,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27FA78771C7D9C84002FEC0B /* RussianApp */,
-				27FA78901C7D9C85002FEC0B /* RussianAppTests */,
-				27FA789B1C7D9C85002FEC0B /* RussianAppUITests */,
+				27FA78771C7D9C84002FEC0B /* subito */,
+				27FA78901C7D9C85002FEC0B /* subitoTests */,
+				27FA789B1C7D9C85002FEC0B /* subitoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,12 +297,12 @@
 /* Begin PBXTargetDependency section */
 		27FA78931C7D9C85002FEC0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27FA78771C7D9C84002FEC0B /* RussianApp */;
+			target = 27FA78771C7D9C84002FEC0B /* subito */;
 			targetProxy = 27FA78921C7D9C85002FEC0B /* PBXContainerItemProxy */;
 		};
 		27FA789E1C7D9C85002FEC0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27FA78771C7D9C84002FEC0B /* RussianApp */;
+			target = 27FA78771C7D9C84002FEC0B /* subito */;
 			targetProxy = 27FA789D1C7D9C85002FEC0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -414,7 +414,7 @@
 				INFOPLIST_FILE = RussianApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = subito;
 			};
 			name = Debug;
 		};
@@ -425,7 +425,7 @@
 				INFOPLIST_FILE = RussianApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = subito;
 			};
 			name = Release;
 		};
@@ -436,8 +436,8 @@
 				INFOPLIST_FILE = RussianAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RussianApp.app/RussianApp";
+				PRODUCT_NAME = subito;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/subito.app/subito";
 			};
 			name = Debug;
 		};
@@ -448,8 +448,8 @@
 				INFOPLIST_FILE = RussianAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RussianApp.app/RussianApp";
+				PRODUCT_NAME = subito;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/subito.app/subito";
 			};
 			name = Release;
 		};
@@ -459,7 +459,7 @@
 				INFOPLIST_FILE = RussianAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = subito;
 				TEST_TARGET_NAME = RussianApp;
 				USES_XCTRUNNER = YES;
 			};
@@ -471,7 +471,7 @@
 				INFOPLIST_FILE = RussianAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.RussianAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = subito;
 				TEST_TARGET_NAME = RussianApp;
 				USES_XCTRUNNER = YES;
 			};
@@ -480,7 +480,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27FA78731C7D9C84002FEC0B /* Build configuration list for PBXProject "RussianApp" */ = {
+		27FA78731C7D9C84002FEC0B /* Build configuration list for PBXProject "subito" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27FA78A31C7D9C85002FEC0B /* Debug */,
@@ -489,29 +489,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27FA78A51C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianApp" */ = {
+		27FA78A51C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "subito" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27FA78A61C7D9C85002FEC0B /* Debug */,
 				27FA78A71C7D9C85002FEC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		27FA78A81C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppTests" */ = {
+		27FA78A81C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "subitoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27FA78A91C7D9C85002FEC0B /* Debug */,
 				27FA78AA1C7D9C85002FEC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		27FA78AB1C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "RussianAppUITests" */ = {
+		27FA78AB1C7D9C85002FEC0B /* Build configuration list for PBXNativeTarget "subitoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27FA78AC1C7D9C85002FEC0B /* Debug */,
 				27FA78AD1C7D9C85002FEC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

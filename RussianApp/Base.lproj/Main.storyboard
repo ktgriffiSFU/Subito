@@ -264,12 +264,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vW4-aH-LJq">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="up1-RY-ZY4">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcr-0F-1q3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -296,9 +296,9 @@
                                     <segue destination="qCF-pb-FcS" kind="show" identifier="showThanks" id="tsl-py-sdj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHN-iu-iyw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="оказание услуг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHN-iu-iyw">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -316,9 +316,9 @@
                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-eX-wXi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контактная информация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqR-eX-wXi">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="0.9910022033" green="1" blue="0.99769507349999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -381,7 +381,9 @@
                             <constraint firstItem="TWq-Du-9eS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3IG-th-GzI"/>
                             <constraint firstItem="up1-RY-ZY4" firstAttribute="top" secondItem="vW4-aH-LJq" secondAttribute="bottom" constant="20" id="46f-Hq-9N9"/>
                             <constraint firstItem="7wF-BR-9cZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4yK-8D-14Q"/>
-                            <constraint firstItem="MqR-eX-wXi" firstAttribute="top" secondItem="xNH-Nl-G8o" secondAttribute="bottom" constant="10" id="5I2-ev-5LJ"/>
+                            <constraint firstItem="MqR-eX-wXi" firstAttribute="top" secondItem="xNH-Nl-G8o" secondAttribute="bottom" constant="10" id="5I2-ev-5LJ">
+                                <variation key="widthClass=compact" constant="21"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="Fnn-6w-Ja1" secondAttribute="trailing" id="5rH-4z-Nir"/>
                             <constraint firstItem="eeD-xK-jDw" firstAttribute="trailing" secondItem="Udf-LQ-tEp" secondAttribute="trailing" id="6BX-Hm-JqV"/>
                             <constraint firstItem="GHN-iu-iyw" firstAttribute="centerX" secondItem="hLx-K0-8Tt" secondAttribute="centerX" id="7Tq-sd-bSX"/>
@@ -412,7 +414,9 @@
                             <constraint firstAttribute="bottom" secondItem="Qcr-0F-1q3" secondAttribute="bottom" constant="20" symbolic="YES" id="R0T-xu-IIg"/>
                             <constraint firstItem="AE3-a3-CuC" firstAttribute="trailing" secondItem="7wF-BR-9cZ" secondAttribute="trailing" id="SsF-Jy-mSl"/>
                             <constraint firstItem="HZO-Ct-6mA" firstAttribute="leading" secondItem="Udf-LQ-tEp" secondAttribute="leading" id="UsI-Oc-tmd"/>
-                            <constraint firstItem="HZO-Ct-6mA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="Vyz-bC-Ti9"/>
+                            <constraint firstItem="HZO-Ct-6mA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="Vyz-bC-Ti9">
+                                <variation key="widthClass=compact" constant="132"/>
+                            </constraint>
                             <constraint firstItem="yXC-2e-cpo" firstAttribute="trailing" secondItem="eeD-xK-jDw" secondAttribute="trailing" id="WKC-D2-rxk"/>
                             <constraint firstItem="Udf-LQ-tEp" firstAttribute="top" secondItem="HZO-Ct-6mA" secondAttribute="bottom" constant="30" id="Wm7-Ky-UEL"/>
                             <constraint firstItem="TWq-Du-9eS" firstAttribute="centerY" secondItem="HZO-Ct-6mA" secondAttribute="centerY" id="Zgw-Ba-s3h"/>
@@ -423,14 +427,20 @@
                             <constraint firstItem="TWq-Du-9eS" firstAttribute="leading" secondItem="HZO-Ct-6mA" secondAttribute="trailing" constant="18" id="dWz-Wc-eok"/>
                             <constraint firstItem="YB8-h3-Xqt" firstAttribute="top" secondItem="Fnn-6w-Ja1" secondAttribute="top" id="e4n-f1-hsb"/>
                             <constraint firstItem="yXC-2e-cpo" firstAttribute="leading" secondItem="AE3-a3-CuC" secondAttribute="leading" id="fwZ-DV-zO8"/>
-                            <constraint firstItem="GHN-iu-iyw" firstAttribute="top" secondItem="hLx-K0-8Tt" secondAttribute="bottom" constant="18" id="ho0-kE-xdV"/>
+                            <constraint firstItem="GHN-iu-iyw" firstAttribute="top" secondItem="hLx-K0-8Tt" secondAttribute="bottom" constant="18" id="ho0-kE-xdV">
+                                <variation key="widthClass=compact" constant="22"/>
+                            </constraint>
                             <constraint firstItem="vW4-aH-LJq" firstAttribute="top" secondItem="JMx-re-1fA" secondAttribute="bottom" constant="20" id="jHi-mg-QKV"/>
                             <constraint firstItem="7wF-BR-9cZ" firstAttribute="centerY" secondItem="up1-RY-ZY4" secondAttribute="centerY" id="jmP-kK-svu"/>
                             <constraint firstItem="eeD-xK-jDw" firstAttribute="top" secondItem="Udf-LQ-tEp" secondAttribute="bottom" constant="26" id="jtJ-md-1tK"/>
                             <constraint firstItem="xNH-Nl-G8o" firstAttribute="leading" secondItem="xAX-MP-286" secondAttribute="leading" id="kbd-Up-kWB"/>
                             <constraint firstItem="MqR-eX-wXi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="ksl-1i-jGx"/>
-                            <constraint firstItem="MqR-eX-wXi" firstAttribute="top" secondItem="eeD-xK-jDw" secondAttribute="bottom" constant="13" id="ktp-LD-FWp"/>
-                            <constraint firstItem="TWq-Du-9eS" firstAttribute="top" secondItem="GHN-iu-iyw" secondAttribute="bottom" constant="8" symbolic="YES" id="qb8-W1-VqQ"/>
+                            <constraint firstItem="MqR-eX-wXi" firstAttribute="top" secondItem="eeD-xK-jDw" secondAttribute="bottom" constant="13" id="ktp-LD-FWp">
+                                <variation key="widthClass=compact" constant="24"/>
+                            </constraint>
+                            <constraint firstItem="TWq-Du-9eS" firstAttribute="top" secondItem="GHN-iu-iyw" secondAttribute="bottom" constant="8" symbolic="YES" id="qb8-W1-VqQ">
+                                <variation key="widthClass=compact" constant="26"/>
+                            </constraint>
                             <constraint firstItem="AE3-a3-CuC" firstAttribute="trailing" secondItem="yXC-2e-cpo" secondAttribute="trailing" id="r5K-yg-7Dy"/>
                             <constraint firstItem="hLx-K0-8Tt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="19" id="s58-PA-vTz"/>
                             <constraint firstItem="yXC-2e-cpo" firstAttribute="centerY" secondItem="JMx-re-1fA" secondAttribute="centerY" id="sbp-Hc-0pi"/>
@@ -792,6 +802,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="u5F-RC-g3Q"/>
-        <segue reference="n6a-dX-uDN"/>
+        <segue reference="UUp-Yq-XQt"/>
     </inferredMetricsTieBreakers>
 </document>

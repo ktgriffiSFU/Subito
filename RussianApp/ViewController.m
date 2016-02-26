@@ -21,6 +21,7 @@
 @synthesize whatLabel,dateLabel;
 
 NSArray *services;
+NSArray *servicesInLatin;
 NSString *serviceChoice;
 NSString *dateChoice;
 NSString *whereString;
@@ -36,9 +37,16 @@ NSString *emailString;
 
     picker.hidden=YES;
     datePicker.hidden=YES;
+    [picker setBackgroundColor:[UIColor redColor]];
+    [datePicker setBackgroundColor:[UIColor redColor]];
+
+    servicesInLatin = [[NSArray alloc] initWithObjects:
+                         @"Manikyur/ Pedikyur", @"Domashnyaya uborka", @"Uslugi kur'yera",
+                         @"Doktor na dom", @"Lichnyy trener",@"Master na vse ruki",@"Massazh", nil];
+    
     services = [[NSArray alloc] initWithObjects:
-                         @"Маникюр/ Педикюр", @"Домашняя уборка", @"Услуги курьера",
-                         @"Доктор на дом", @"Личный тренер",@"Мастер на все руки",@"Массаж", nil];
+                @"Маникюр/ Педикюр", @"Домашняя уборка", @"Услуги курьера",
+                @"Доктор на дом", @"Личный тренер",@"Мастер на все руки",@"Массаж", nil];
     whatLabel.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whatLabelTapped)];
@@ -165,7 +173,7 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-    NSString *whatString =[services objectAtIndex:row];
+    NSString *whatString =[servicesInLatin objectAtIndex:row];
     whatLabel.text = whatString;
 }
 
