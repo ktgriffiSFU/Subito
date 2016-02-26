@@ -29,6 +29,11 @@ NSString *phoneString;
 NSString *emailString;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+
     picker.hidden=YES;
     datePicker.hidden=YES;
     services = [[NSArray alloc] initWithObjects:
@@ -45,7 +50,16 @@ NSString *emailString;
 
     
 }
+-(void)dismissKeyboard {
+    [whereField resignFirstResponder];
+    [name resignFirstResponder];
+    [email resignFirstResponder];
+    [phone resignFirstResponder];
+    [datePicker resignFirstResponder];
+    
 
+
+}
 -(void)whatLabelTapped{
     if (datePicker.hidden == NO) {
         datePicker.hidden = YES;
@@ -77,33 +91,10 @@ NSString *emailString;
 }
 
 - (IBAction)submitButton:(UIButton *)sender {
-    whereString = whereField.text;
-    nameString=name.text;
-    phoneString=phone.text;
-    emailString=email.text;
-    //Check all fields have been filled
-    if (![self CheckStringSize:whereString]) {
-        [self Alert:@"Indicate where you want the service"];
-        return;
-    }
-    if (![self CheckStringSize:nameString]) {
-        [self Alert:@"Please tell us your name"];
-        return;
-    }
-    if (![self CheckStringSize:phoneString]) {
-        [self Alert:@"Please enter a valid number"];
-        return;
-    }
-    if (![self CheckStringSize:emailString]) {
-        [self Alert:@"Please enter a valid email"];
-        return;
-    }
-    if(![emailString containsString:@"@"]) {
-        [self Alert:@"Please enter a valid email"];
-        return;
-    }
+
     
     [self sendToForm];
+
 
 }
 -(bool)CheckStringSize : (NSString *)inputString{
@@ -114,6 +105,7 @@ NSString *emailString;
     }
     
 }
+
 -(void)sendToForm{
     whereString = whereField.text;
     nameString=name.text;
@@ -132,8 +124,8 @@ NSString *emailString;
     //set http method
     [request setHTTPMethod:@"POST"];
     //initialize a post data
-    NSString *postData = [NSString stringWithFormat:@"entry.1550955212=%@&entry.935955213=%@&entry.1547576233=%@&entry.202631922=%@&entry.1387567225=%@&entry.1031369018",serviceChoice,dateChoice,whereString,emailString,phoneString,nameString];    //set request content type we MUST set this value.
-    [request setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    NSString *postData = [NSString stringWithFormat:@"entry.1550955212=%@&entry.935955213=%@&entry.1547576233=%@&entry.202631922=%@&entry.1387567225=%@&entry.1031369018=%@",serviceChoice,dateChoice,whereString,emailString,phoneString,nameString];    //set request content type we MUST set this value.
+    [request setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     
     //set post data of request
     [request setHTTPBody:[postData dataUsingEncoding:NSUTF8StringEncoding]];

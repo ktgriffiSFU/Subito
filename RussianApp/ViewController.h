@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *email;
-@property (weak, nonatomic) IBOutlet UIImageView *appLogo;
+
 - (IBAction)infoButton:(UIButton *)sender;
 - (IBAction)submitButton:(UIButton *)sender;
 
