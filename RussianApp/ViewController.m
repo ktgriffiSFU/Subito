@@ -24,6 +24,7 @@ NSArray *services;
 NSArray *servicesInLatin;
 NSString *serviceChoice;
 NSString *dateChoice;
+NSString *timeChoice;
 NSString *whereString;
 NSString *nameString;
 NSString *phoneString;
@@ -120,12 +121,19 @@ NSString *whatLabelLatin;
     nameString=[self translator:name.text];
     phoneString=phone.text;
     emailString=[self translator:email.text];
-    dateChoice = dateLabel.text;
+    NSDate *myDate = datePicker.date;
+    
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    [timeFormat setDateFormat:@"HH:mm"];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM"];
+    dateChoice = [dateFormat stringFromDate:myDate];
+    timeChoice=[timeFormat stringFromDate:myDate];
     serviceChoice = whatLabelLatin;
     //initialize new mutable data
     NSMutableData *data = [[NSMutableData alloc] init];
     //initialize url that is going to be fetched.
-    NSURL *url = [NSURL URLWithString:@"https://docs.google.com/forms/d/1jeyxQYlgIUylhXnZZEcy6BC2dx_2AUB3qSNuCqFHUDU/formResponse"];
+    NSURL *url = [NSURL URLWithString:@"https://docs.google.com/forms/d/1ziaqGN2qtJfUhbR5A36LV_yRRmL7vKyEOrvAvO5UcC4/formResponse"];
     
     //initialize a request from url
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[url standardizedURL]];
@@ -133,7 +141,7 @@ NSString *whatLabelLatin;
     //set http method
     [request setHTTPMethod:@"POST"];
     //initialize a post data
-    NSString *postData = [NSString stringWithFormat:@"entry.1550955212=%@&entry.935955213=%@&entry.1547576233=%@&entry.202631922=%@&entry.1387567225=%@&entry.1031369018=%@",serviceChoice,dateChoice,whereString,emailString,phoneString,nameString];    //set request content type we MUST set this value.
+    NSString *postData = [NSString stringWithFormat:@"entry.1946175918=%@&entry.1811886757=%@&entry.1286750722=%@&entry.395306197=%@&entry.382314349=%@&entry.684338873=%@&entry.1560671726=%@",serviceChoice,dateChoice,timeChoice,whereString,nameString,phoneString,emailString];    //set request content type we MUST set this value.
     [request setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     
     //set post data of request
@@ -148,7 +156,7 @@ NSString *whatLabelLatin;
 
 -(NSString*)translator:(NSString*)cyrillicText{
     NSMutableString *latinText = [cyrillicText mutableCopy];
-    CFMutableStringRef bufferRef = (__bridge CFMutableStringRef)buffer;
+    CFMutableStringRef bufferRef = (__bridge CFMutableStringRef)latinText;
     CFStringTransform(bufferRef, NULL, kCFStringTransformToLatin, false);
     return latinText;
 }
