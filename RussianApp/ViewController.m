@@ -28,6 +28,7 @@ NSString *whereString;
 NSString *nameString;
 NSString *phoneString;
 NSString *emailString;
+NSString *whatLabelLatin;
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -40,12 +41,12 @@ NSString *emailString;
     [picker setBackgroundColor:[UIColor redColor]];
     [datePicker setBackgroundColor:[UIColor redColor]];
 
-    servicesInLatin = [[NSArray alloc] initWithObjects:
+    servicesInLatin = [[NSArray alloc] initWithObjects:@" ",
                          @"Manikyur/ Pedikyur", @"Domashnyaya uborka", @"Uslugi kur'yera",
                          @"Doktor na dom", @"Lichnyy trener",@"Master na vse ruki",@"Massazh", nil];
     
     services = [[NSArray alloc] initWithObjects:
-                @"Маникюр/ Педикюр", @"Домашняя уборка", @"Услуги курьера",
+                @" ",@"Маникюр/ Педикюр", @"Домашняя уборка", @"Услуги курьера",
                 @"Доктор на дом", @"Личный тренер",@"Мастер на все руки",@"Массаж", nil];
     whatLabel.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture =
@@ -115,12 +116,12 @@ NSString *emailString;
 }
 
 -(void)sendToForm{
-    whereString = whereField.text;
-    nameString=name.text;
+    whereString = [self translator:whereField.text];
+    nameString=[self translator:name.text];
     phoneString=phone.text;
-    emailString=email.text;
+    emailString=[self translator:email.text];
     dateChoice = dateLabel.text;
-    serviceChoice = whatLabel.text;
+    serviceChoice = whatLabelLatin;
     //initialize new mutable data
     NSMutableData *data = [[NSMutableData alloc] init];
     //initialize url that is going to be fetched.
@@ -144,12 +145,14 @@ NSString *emailString;
     //start the connection
     [connection start];
 }
-- (void) Alert:(NSString *)message {
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
-    [alert show];
-    
+
+-(NSString*)translator:(NSString*)cyrillicText{
+    NSMutableString *latinText = [cyrillicText mutableCopy];
+    CFMutableStringRef bufferRef = (__bridge CFMutableStringRef)buffer;
+    CFStringTransform(bufferRef, NULL, kCFStringTransformToLatin, false);
+    return latinText;
 }
+
 #pragma mark -
 #pragma mark PickerView DataSource
 
@@ -173,7 +176,8 @@ numberOfRowsInComponent:(NSInteger)component
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-    NSString *whatString =[servicesInLatin objectAtIndex:row];
+    NSString *whatString =[services objectAtIndex:row];
+    whatLabelLatin = [servicesInLatin objectAtIndex:row];
     whatLabel.text = whatString;
 }
 
