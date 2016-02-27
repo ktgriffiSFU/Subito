@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-<UIPickerViewDelegate, UIPickerViewDataSource>
+<UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 
 @property (nonatomic, retain) IBOutlet UIPickerView *picker;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;

@@ -36,7 +36,6 @@ NSString *whatLabelLatin;
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
-
     picker.hidden=YES;
     datePicker.hidden=YES;
     [picker setBackgroundColor:[UIColor redColor]];
@@ -66,6 +65,7 @@ NSString *whatLabelLatin;
     [email resignFirstResponder];
     [phone resignFirstResponder];
     [datePicker resignFirstResponder];
+    [picker resignFirstResponder];
     
 
 
@@ -214,4 +214,5 @@ numberOfRowsInComponent:(NSInteger)component
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"CONNECTION ERROR: %@", [error localizedDescription]);
 }
+
 @end
